@@ -345,7 +345,7 @@ trait ElementTrait
             'fieldId' => $field->id,
             'storageKey' => 'field.' . $field->id,
             'name' => 'elementId',
-            'elements' => [$this->getElement()],
+            'elements' => array_filter([$this->getElement()]),
             'sources' => $this->inputSources(),
             'criteria' => $selectionCriteria,
             'sourceElementId' => !empty($element->id) ? $element->id : null,
